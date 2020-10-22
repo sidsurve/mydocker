@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: sid-rc
+spec:
+  replicas: 3
+  selector:
+    app: sidapp
+  template:
+    metadata:
+      labels:
+        app: sidapp
+    spec:
+      containers:
+      - name: sid-java-container
+        image: sid4iac/mysidapp:1
+        ports:
+        - containerPort: 8080
