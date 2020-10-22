@@ -13,6 +13,6 @@ spec:
     spec:
       containers:
       - name: sid-java-container
-        image: sid4iac/mysidapp:1
+        image: nginx
         ports:
         - containerPort: 8080
